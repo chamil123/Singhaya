@@ -28,7 +28,17 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition login-page" >
+<div class="row">
+<div class="col-md-12">
+    <div class="col-md-offset-10 col-md-2">
+    <div class="pull-right" style="padding:10px">
+    <a href="{{route('admin.login')}}"><span class="glyphicon glyphicon-log-in"></span>  {{ ucfirst(config('multiauth.prefix')) }} Login</a>
+                               
+                                </div>
+    </div>
+</div>
 
+</div>
 <div class="login-box">
   <div class="login-logo">
     <a href="../../index2.html"><b>Sing</b>haya</a>
@@ -58,7 +68,7 @@
           <button type="submit" class="btn btn-primary btn-block btn-flat">Send Code</button>
         </div>
         <div class="col-md-4 col-md-offset-4">
-        <a href="{{route('admin.login')}}">{{ ucfirst(config('multiauth.prefix')) }} Login</a>
+      
         </div>
         <!-- /.col -->
       </div>
