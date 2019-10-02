@@ -336,7 +336,7 @@
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">MAIN NAVIGATIONss</li>
+        <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
@@ -412,7 +412,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-          @admin('super')
+          @admin('super,manager')
             <li><a href="{{ route('admin.show') }}"><i class="fa fa-circle-o"></i> Admin List</a></li>
             <li><a href="{{ route('admin.roles') }}"><i class="fa fa-circle-o"></i> Role List</a></li>
             @endadmin

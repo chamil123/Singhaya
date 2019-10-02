@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,6 +18,20 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- for Datatables -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.bootstrap.min.css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/2.2.0/js/bootstrap.min.js"></script>
+
+    <style>
+    .modal {
+         overflow-y: scroll;
+    }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -76,5 +90,219 @@
             @yield('content')
         </main>
     </div>
+
+
+
 </body>
+
+
+{{-- 
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+ --}}
+<script>
+    $(document).ready(function(){
+        $('#agent_table').DataTable({
+            "processing":true,
+            "serverSide":true,
+            "ajax": "{{ route('home.getdata') }}",
+            "columns":[
+                {"data":"ad_title"},
+                {"data":"ad_cusName"},
+                {"data":"type_name"},
+                {"data":"status"},
+                {"data":"updated_at"}
+            ]
+        });
+        
+       $('#add_data').click(function() {
+        $category = $('#cats').val();
+        if ($category == 1) {
+             $('#houseModal').modal('show');
+             $('#houseCategory').val($category);
+        }else if($category == 2){  
+             $('#resModal').modal('show');
+             $('#resCategory').val($category);   
+        }else if($category == 3){
+             $('#landModal').modal('show');
+             $('#landCategory').val($category);
+        }else if($category == 4){
+             $('#eduModal').modal('show');
+             $('#eduCategory').val($category);
+        }else if($category == 7){
+             $('#vehicleModal').modal('show');
+             $('#vehicleCategory').val($category);
+        }
+          
+           $('#house_form')[0].reset();
+           $('#houseform_output').html('');
+           $('#housebutton_action').val('insert');
+           $('#houseaction').val('Add');
+
+           $('#land_form')[0].reset();
+           $('#landform_output').html('');
+           $('#landbutton_action').val('insert');
+           $('#landaction').val('Add');
+
+           $('#res_form')[0].reset();
+           $('#resform_output').html('');
+           $('#resbutton_action').val('insert');
+           $('#resaction').val('Add');
+
+           $('#edu_form')[0].reset();
+           $('#eduform_output').html('');
+           $('#edubutton_action').val('insert');
+           $('#eduaction').val('Add');
+
+           $('#vehicle_form')[0].reset();
+           $('#vehicleform_output').html('');
+           $('#vehiclebutton_action').val('insert');
+           $('#vehicleaction').val('Add');
+
+       }); 
+
+
+
+       $('#house_form').on('submit', function(event){
+        event.preventDefault();
+        var form_data = $(this).serialize();
+        $.ajax({
+            url: "{{ route('ajaxdata.housedata') }}",
+            method: "POST",
+            data: form_data,
+            dataType:"json",
+            success: function(data){
+                if (data.error.length > 0) {
+                    var error_html = '';
+                for (var count = 0; count < data.error.length; count++) {
+                    error_html += '<div class="alert alert-danger"><strong>'+data.error[count]+'</strong></div>';
+                }
+                $('#houseform_output').html(error_html);
+                } else {
+                    $('#houseform_output').html(data.success);
+                    $('#house_form')[0].reset();
+                    $('#houseaction').val('Add');
+                    $('#house_detail').text('House Category Details');
+                    $('#housebutton_action').val('insert');
+                    setTimeout(function() {$('#houseModal').modal('toggle');}, 3000);
+                    $('#agent_table').DataTable().ajax.reload();
+                }
+            }
+        })
+       });
+
+        $('#land_form').on('submit', function(event){
+        event.preventDefault();
+        var form_data = $(this).serialize();
+        $.ajax({
+            url: "{{ route('ajaxdata.landdata') }}",
+            method: "POST",
+            data: form_data,
+            dataType:"json",
+            success: function(data){
+                if (data.error.length > 0) {
+                    var error_html = '';
+                for (var count = 0; count < data.error.length; count++) {
+                    error_html += '<div class="alert alert-danger"><strong>'+data.error[count]+'</strong></div>';
+                }
+                $('#landform_output').html(error_html);
+                } else {
+                    $('#landform_output').html(data.success);
+                    $('#land_form')[0].reset();
+                    $('#landaction').val('Add');
+                    $('#land_detail').text('Land Category Details');
+                    $('#landbutton_action').val('insert');
+                    setTimeout(function() {$('#landModal').modal('toggle');}, 4000);
+                    $('#agent_table').DataTable().ajax.reload();
+                }
+            }
+        })
+       });
+
+      $('#res_form').on('submit', function(event){
+        event.preventDefault();
+        var form_data = $(this).serialize();
+        $.ajax({
+            url: "{{ route('ajaxdata.resdata') }}",
+            method: "POST",
+            data: form_data,
+            dataType:"json",
+            success: function(data){
+                if (data.error.length > 0) {
+                    var error_html = '';
+                for (var count = 0; count < data.error.length; count++) {
+                    error_html += '<div class="alert alert-danger"><strong>'+data.error[count]+'</strong></div>';
+                }
+                $('#resform_output').html(error_html);
+                } else {
+                    $('#resform_output').html(data.success);
+                    $('#res_form')[0].reset();
+                    $('#resaction').val('Add');
+                    $('#res_detail').text('Land Category Details');
+                    $('#resbutton_action').val('insert');
+                    setTimeout(function() {$('#resModal').modal('toggle');}, 4000);
+                    $('#agent_table').DataTable().ajax.reload();
+                }
+            }
+        })
+       });
+
+       $('#edu_form').on('submit', function(event){
+        event.preventDefault();
+        var form_data = $(this).serialize();
+        $.ajax({
+            url: "{{ route('ajaxdata.edudata') }}",
+            method: "POST",
+            data: form_data,
+            dataType:"json",
+            success: function(data){
+                if (data.error.length > 0) {
+                    var error_html = '';
+                for (var count = 0; count < data.error.length; count++) {
+                    error_html += '<div class="alert alert-danger"><strong>'+data.error[count]+'</strong></div>';
+                }
+                $('#eduform_output').html(error_html);
+                } else {
+                    $('#eduform_output').html(data.success);
+                    $('#edu_form')[0].reset();
+                    $('#eduaction').val('Add');
+                    $('#edu_detail').text('Education Category Details');
+                    $('#edubutton_action').val('insert');
+                    setTimeout(function() {$('#eduModal').modal('toggle');}, 4000);
+                    $('#agent_table').DataTable().ajax.reload();
+                }
+            }
+        })
+       });  
+
+       $('#vehicle_form').on('submit', function(event){
+        event.preventDefault();
+        var form_data = $(this).serialize();
+        $.ajax({
+            url: "{{ route('ajaxdata.vehicledata') }}",
+            method: "POST",
+            data: form_data,
+            dataType:"json",
+            success: function(data){
+                if (data.error.length > 0) {
+                    var error_html = '';
+                for (var count = 0; count < data.error.length; count++) {
+                    error_html += '<div class="alert alert-danger"><strong>'+data.error[count]+'</strong></div>';
+                }
+                $('#vehicleform_output').html(error_html);
+                } else {
+                    $('#vehicleform_output').html(data.success);
+                    $('#vehicle_form')[0].reset();
+                    $('#vehicleaction').val('Add');
+                    $('#vehicle_detail').text('Vehicle Category Details');
+                    $('#vehiclebutton_action').val('insert');
+                    setTimeout(function() {$('#vehicleModal').modal('toggle');}, 4000);
+                    $('#agent_table').DataTable().ajax.reload();
+                }
+            }
+        })
+       }); 
+
+    });
+</script> 
 </html>

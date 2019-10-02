@@ -110,7 +110,7 @@
                            <li><a href="login.html"><i class="fa fa-sign-in"></i> Log in</a></li>
                            <li class="hidden-xs hidden-sm"><a href="register.html"><i class="fa fa-unlock" aria-hidden="true"></i> Register</a></li>
                            <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="img-circle resize" alt="" src="{{ asset('bower_components/web/images/users/3.jpg')}}"> <span class="myname hidden-xs"> Umair </span> <span class="caret"></span></a>
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="img-circle resize" alt="" src="{{ asset('bower_components/web/images/users/3.jpg')}}"> <span class="myname hidden-xs">user </span> <span class="caret"></span></a>
                               <ul class="dropdown-menu">
                                  <li><a href="profile.html">User Profile</a></li>
                                  <li><a href="archives.html">Archives</a></li>
@@ -594,6 +594,209 @@
       <!-- =-=-=-=-=-=-= Advanced Search End =-=-=-=-=-=-= -->
       <!-- =-=-=-=-=-=-= Main Content Area =-=-=-=-=-=-= -->
       <div class="main-content-area clearfix">
+         
+      <!-- =-=-=-=-=-=-= Testimonials =-=-=-=-=-=-= -->         
+         <section class="section-padding parallex bg-img-3">
+            <div class="container">
+               <div class="row">
+                  <div class="owl-testimonial-2">
+                     <!--Testimonial Column-->
+                     <div class="single_testimonial">
+                        <div class="textimonial-content">
+                           <h4>Just fabulous</h4>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru.</p>
+                        </div>
+                        <div class="testimonial-meta-box">
+                           <img src="images/users/1.jpg" alt="">
+                           <div class="testimonial-meta">
+                              <h3 class="">Jhon Emily Copper </h3>
+                              <p> Developer</p>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                           </div>
+                        </div>
+                     </div>
+                     <!--Testimonial Column-->
+                     <div class="single_testimonial">
+                        <div class="textimonial-content">
+                           <h4>Awesome ! Loving It</h4>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru.</p>
+                        </div>
+                        <div class="testimonial-meta-box">
+                           <img src="images/users/2.jpg" alt="">
+                           <div class="testimonial-meta">
+                              <h3 class="">Hania Sheikh </h3>
+                              <p> CEO Pvt. Inc.</p>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                           </div>
+                        </div>
+                     </div>
+                      <!--Testimonial Column-->
+                     <div class="single_testimonial">
+                        <div class="textimonial-content">
+                           <h4>Very quick and Fast</h4>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru.</p>
+                        </div>
+                        <div class="testimonial-meta-box">
+                           <img src="images/users/3.jpg" alt="">
+                           <div class="testimonial-meta">
+                              <h3 class="">Jaccica Albana </h3>
+                              <p>  CTO Albana Inc.</p>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                           </div>
+                        </div>
+                     </div>
+                     <!--Testimonial Column-->
+                     <div class="single_testimonial">
+                        <div class="textimonial-content">
+                           <h4>Done in 3 Months! Awesome</h4>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru.</p>
+                        </div>
+                        <div class="testimonial-meta-box">
+                           <img src="images/users/4.jpg" alt="">
+                           <div class="testimonial-meta">
+                              <h3 class="">Humayun Sarfraz </h3>
+                              <p>  CTO Glixen Technologies.</p>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                           </div>
+                        </div>
+                     </div>
+                     <!--Testimonial Column-->
+                     <div class="single_testimonial">
+                        <div class="textimonial-content">
+                           <h4>Find It Quit Professional</h4>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru.</p>
+                        </div>
+                        <div class="testimonial-meta-box">
+                           <img src="images/users/4.jpg" alt="">
+                           <div class="testimonial-meta">
+                              <h3 class="">Massica O'Brain </h3>
+                              <p> Audit Officer </p>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                           </div>
+                        </div>
+                     </div>
+                     <!--Testimonial Column-->
+                     <div class="single_testimonial">
+                        <div class="textimonial-content">
+                           <h4>Just fabulous</h4>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru.</p>
+                        </div>
+                        <div class="testimonial-meta-box">
+                           <img src="images/users/1.jpg" alt="">
+                           <div class="testimonial-meta">
+                              <h3 class="">Jhon Emily Copper </h3>
+                              <p> Developer</p>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                           </div>
+                        </div>
+                     </div>
+                     <!--Testimonial Column-->
+                     <div class="single_testimonial">
+                        <div class="textimonial-content">
+                           <h4>Awesome ! Loving It</h4>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru.</p>
+                        </div>
+                        <div class="testimonial-meta-box">
+                           <img src="images/users/2.jpg" alt="">
+                           <div class="testimonial-meta">
+                              <h3 class="">Hania Sheikh </h3>
+                              <p> CEO Pvt. Inc.</p>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                           </div>
+                        </div>
+                     </div>
+                     <!--Testimonial Column-->
+                     <div class="single_testimonial">
+                        <div class="textimonial-content">
+                           <h4>Very quick and Fast</h4>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru.</p>
+                        </div>
+                        <div class="testimonial-meta-box">
+                           <img src="images/users/3.jpg" alt="">
+                           <div class="testimonial-meta">
+                              <h3 class="">Jaccica Albana </h3>
+                              <p>  CTO Albana Inc.</p>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                           </div>
+                        </div>
+                     </div>
+                     <!--Testimonial Column-->
+                     <div class="single_testimonial">
+                        <div class="textimonial-content">
+                           <h4>Done in 3 Months! Awesome</h4>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru.</p>
+                        </div>
+                        <div class="testimonial-meta-box">
+                           <img src="images/users/4.jpg" alt="">
+                           <div class="testimonial-meta">
+                              <h3 class="">Humayun Sarfraz </h3>
+                              <p>  CTO Glixen Tech.</p>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                           </div>
+                        </div>
+                     </div>
+                     <!--Testimonial Column-->
+                     <div class="single_testimonial">
+                        <div class="textimonial-content">
+                           <h4>Find It Quit Professional</h4>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru.</p>
+                        </div>
+                        <div class="testimonial-meta-box">
+                           <img src="images/users/4.jpg" alt="">
+                           <div class="testimonial-meta">
+                              <h3 class="">Massica O'Brain </h3>
+                              <p> Audit Officer </p>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- =-=-=-=-=-=-= Testimonials Section End =-=-=-=-=-=-= -->
+
+
          <!-- =-=-=-=-=-=-= Featured Ads =-=-=-=-=-=-= -->
          <section class="custom-padding gray">
             <!-- Main Container -->
@@ -896,206 +1099,7 @@
          
          
 
-         <!-- =-=-=-=-=-=-= Testimonials =-=-=-=-=-=-= -->         
-         <section class="section-padding parallex bg-img-3">
-            <div class="container">
-               <div class="row">
-                  <div class="owl-testimonial-2">
-                     <!--Testimonial Column-->
-                     <div class="single_testimonial">
-                        <div class="textimonial-content">
-                           <h4>Just fabulous</h4>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru.</p>
-                        </div>
-                        <div class="testimonial-meta-box">
-                           <img src="images/users/1.jpg" alt="">
-                           <div class="testimonial-meta">
-                              <h3 class="">Jhon Emily Copper </h3>
-                              <p> Developer</p>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                           </div>
-                        </div>
-                     </div>
-                     <!--Testimonial Column-->
-                     <div class="single_testimonial">
-                        <div class="textimonial-content">
-                           <h4>Awesome ! Loving It</h4>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru.</p>
-                        </div>
-                        <div class="testimonial-meta-box">
-                           <img src="images/users/2.jpg" alt="">
-                           <div class="testimonial-meta">
-                              <h3 class="">Hania Sheikh </h3>
-                              <p> CEO Pvt. Inc.</p>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                           </div>
-                        </div>
-                     </div>
-                      <!--Testimonial Column-->
-                     <div class="single_testimonial">
-                        <div class="textimonial-content">
-                           <h4>Very quick and Fast</h4>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru.</p>
-                        </div>
-                        <div class="testimonial-meta-box">
-                           <img src="images/users/3.jpg" alt="">
-                           <div class="testimonial-meta">
-                              <h3 class="">Jaccica Albana </h3>
-                              <p>  CTO Albana Inc.</p>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                           </div>
-                        </div>
-                     </div>
-                     <!--Testimonial Column-->
-                     <div class="single_testimonial">
-                        <div class="textimonial-content">
-                           <h4>Done in 3 Months! Awesome</h4>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru.</p>
-                        </div>
-                        <div class="testimonial-meta-box">
-                           <img src="images/users/4.jpg" alt="">
-                           <div class="testimonial-meta">
-                              <h3 class="">Humayun Sarfraz </h3>
-                              <p>  CTO Glixen Technologies.</p>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                           </div>
-                        </div>
-                     </div>
-                     <!--Testimonial Column-->
-                     <div class="single_testimonial">
-                        <div class="textimonial-content">
-                           <h4>Find It Quit Professional</h4>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru.</p>
-                        </div>
-                        <div class="testimonial-meta-box">
-                           <img src="images/users/4.jpg" alt="">
-                           <div class="testimonial-meta">
-                              <h3 class="">Massica O'Brain </h3>
-                              <p> Audit Officer </p>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                           </div>
-                        </div>
-                     </div>
-                     <!--Testimonial Column-->
-                     <div class="single_testimonial">
-                        <div class="textimonial-content">
-                           <h4>Just fabulous</h4>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru.</p>
-                        </div>
-                        <div class="testimonial-meta-box">
-                           <img src="images/users/1.jpg" alt="">
-                           <div class="testimonial-meta">
-                              <h3 class="">Jhon Emily Copper </h3>
-                              <p> Developer</p>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                           </div>
-                        </div>
-                     </div>
-                     <!--Testimonial Column-->
-                     <div class="single_testimonial">
-                        <div class="textimonial-content">
-                           <h4>Awesome ! Loving It</h4>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru.</p>
-                        </div>
-                        <div class="testimonial-meta-box">
-                           <img src="images/users/2.jpg" alt="">
-                           <div class="testimonial-meta">
-                              <h3 class="">Hania Sheikh </h3>
-                              <p> CEO Pvt. Inc.</p>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                           </div>
-                        </div>
-                     </div>
-                     <!--Testimonial Column-->
-                     <div class="single_testimonial">
-                        <div class="textimonial-content">
-                           <h4>Very quick and Fast</h4>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru.</p>
-                        </div>
-                        <div class="testimonial-meta-box">
-                           <img src="images/users/3.jpg" alt="">
-                           <div class="testimonial-meta">
-                              <h3 class="">Jaccica Albana </h3>
-                              <p>  CTO Albana Inc.</p>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                           </div>
-                        </div>
-                     </div>
-                     <!--Testimonial Column-->
-                     <div class="single_testimonial">
-                        <div class="textimonial-content">
-                           <h4>Done in 3 Months! Awesome</h4>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru.</p>
-                        </div>
-                        <div class="testimonial-meta-box">
-                           <img src="images/users/4.jpg" alt="">
-                           <div class="testimonial-meta">
-                              <h3 class="">Humayun Sarfraz </h3>
-                              <p>  CTO Glixen Tech.</p>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                           </div>
-                        </div>
-                     </div>
-                     <!--Testimonial Column-->
-                     <div class="single_testimonial">
-                        <div class="textimonial-content">
-                           <h4>Find It Quit Professional</h4>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim veniam quis notru.</p>
-                        </div>
-                        <div class="testimonial-meta-box">
-                           <img src="images/users/4.jpg" alt="">
-                           <div class="testimonial-meta">
-                              <h3 class="">Massica O'Brain </h3>
-                              <p> Audit Officer </p>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <!-- =-=-=-=-=-=-= Testimonials Section End =-=-=-=-=-=-= -->
+         
          
        
          <!-- =-=-=-=-=-=-= Expert Reviews Section =-=-=-=-=-=-= -->
