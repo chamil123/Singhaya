@@ -10,6 +10,8 @@ use App\Restaurant;
 use App\House; 
 use App\Vehicle; 
 use App\Education; 
+use App\Job; 
+use App\Typecollection; 
 use Auth; 
 use DB;
 use Validator;
@@ -20,14 +22,15 @@ class AdsController extends Controller
      public function housedata(Request $request){
         $validation = Validator::make($request->all(),[
             'rooms' => 'required',
-            'landsize' => 'required',
+            // 'landsize' => 'required',
+            'homeSub' => 'required',
 
             'homeCusName' => 'required',
             'homeCusMobNum' => 'required',
-            'HomeDistrict' => 'required',
-            'HomeHomeTown' => 'required',
-            'HomeDescripton' => 'required',
-            'HomeTitle' => 'required',
+            'homeDistrict' => 'required',
+            'homeHomeTown' => 'required',
+            'homeDescripton' => 'required',
+            'homeTitle' => 'required',
             'houseBanner' => 'required',
     ]);
 
@@ -55,19 +58,29 @@ class AdsController extends Controller
                     'status' => 1,
                     'user_id' => auth()->user()->id,
                 ]);
+                $ad->save();
+
                 $house = new House([
                     'bath_rooms' => $request->get('bathrooms'),
                     'rooms' => $request->get('rooms'),
                     'land_size' => $request->get('landsize'),
                     'water' => $request->get('homeWater'),
                     'electricity' => $request->get('homeElectricity'),
-                    'ad_id' => 1,
-                    'type_id' => 1,
+                    'ad_id' => $ad->ad_id,
                 ]);
-                
-                $ad->save();
                 $house->save();
-                $success_output = '<div class="alert alert-success"><storng> Home Banner Data Inserted Successfully!!!</strong></div>';
+
+                if(count($request->homeSub) > 0){
+                    foreach($request->homeSub as $item=>$v){
+                        $data2 = array(
+                            'type_id'=> $request->homeSub[$item],
+                            'ad_id'=> $ad->ad_id
+                        );
+                    Typecollection::insert($data2);
+                    }
+                }
+
+                $success_output = '<div class="alert alert-success"><strong> Home Banner Data Inserted Successfully!!!</strong></div>';
             }
         }
         
@@ -81,7 +94,6 @@ class AdsController extends Controller
     public function landdata(Request $request){
         $validation = Validator::make($request->all(),[
             'landLandSize' => 'required',
-            'landRoads' => 'required',
 
             'landCusName' => 'required',
             'landCusMobNum' => 'required',
@@ -90,6 +102,7 @@ class AdsController extends Controller
             'landDescripton' => 'required',
             'landTitle' => 'required',
             'landBanner' => 'required',
+            'landSub' => 'required',
     ]);
 
         $error_array = array();
@@ -116,16 +129,26 @@ class AdsController extends Controller
                     'status' => 1,
                     'user_id' => auth()->user()->id,
                 ]);
+                $ad->save();
                 $land = new Land([
                     'roads' => $request->get('landRoads'),
                     'size' => $request->get('landLandSize'),
                     'water' => $request->get('landWater'),
                     'electricity' => $request->get('landElectricity'),
-                    'ad_id' => 1,
-                    'type_id' => 1,
+                    'ad_id' => $ad->ad_id,
                 ]);
-                $ad->save();
                 $land->save();
+
+                if(count($request->landSub) > 0){
+                    foreach($request->landSub as $item=>$v){
+                        $data2 = array(
+                            'type_id'=> $request->landSub[$item],
+                            'ad_id'=> $ad->ad_id
+                        );
+                    Typecollection::insert($data2);
+                    }
+                }
+
                 $success_output = '<div class="alert alert-success"><strong> Land Banner Data Inserted Successfully!!!<storng></div>';
             }
         }
@@ -146,6 +169,10 @@ class AdsController extends Controller
             'resDescripton' => 'required',
             'resTitle' => 'required',
             'resBanner' => 'required',
+            'resRoomType' => 'required',
+            'resSub' => 'required',
+            
+            'resRoomType' => 'required',
     ]);
 
         $error_array = array();
@@ -172,15 +199,25 @@ class AdsController extends Controller
                     'status' => 1,
                     'user_id' => auth()->user()->id,
                 ]);
+                $ad->save();
                 $restaurant = new Restaurant([
                     'room_type' => $request->get('resRoomType'),
                     'other_specs' => $request->get('resOtherSpec'),
-                    'ad_id' => 1,
-                    'type_id' => 1,
+                    'ad_id' => $ad->ad_id,
                 ]);
-                $ad->save();
                 $restaurant->save();
-                $success_output = '<div class="alert alert-success"><storng> Restaurants Banner Data Inserted Successfully!!!</strong></div>';
+
+                if(count($request->resSub) > 0){
+                    foreach($request->resSub as $item=>$v){
+                        $data2 = array(
+                            'type_id'=> $request->resSub[$item],
+                            'ad_id'=> $ad->ad_id
+                        );
+                    Typecollection::insert($data2);
+                    }
+                }
+               
+                $success_output = '<div class="alert alert-success"><strong> Restaurants Banner Data Inserted Successfully!!!</strong></div>';
             }
         }
         
@@ -203,8 +240,10 @@ class AdsController extends Controller
             
             'eduMedium' => 'required',
             'eduLocation' => 'required',
+            'eduClassType' => 'required',
             'eduExam' => 'required',
             'eduSubject' => 'required',
+            'eduSub' => 'required',
     ]);
 
         $error_array = array();
@@ -231,16 +270,27 @@ class AdsController extends Controller
                     'status' => 1,
                     'user_id' => auth()->user()->id,
                 ]);
+                $ad->save();
                 $education = new Education([
                     'medium' => $request->get('eduMedium'),
                     'class_type' => $request->get('eduClassType'),
                     'locations' => $request->get('eduLocation'),
                     'exams' => $request->get('eduExam'),
                     'subjects' => $request->get('eduSubject'),
-                    'ad_id' => 1,
+                    'ad_id' => $ad->ad_id,
                 ]);
-                $ad->save();
                 $education->save();
+
+                if(count($request->eduSub) > 0){
+                    foreach($request->eduSub as $item=>$v){
+                        $data2 = array(
+                            'type_id'=> $request->eduSub[$item],
+                            'ad_id'=> $ad->ad_id
+                        );
+                    Typecollection::insert($data2);
+                    }
+                }
+
                 $success_output = '<div class="alert alert-success"><strong> Education Banner Data Inserted Successfully!!!</strong></div>';
             }
         }
@@ -262,10 +312,11 @@ class AdsController extends Controller
             'vehicleTitle' => 'required',
             'vehicleBanner' => 'required',
             
-            'vehicleType' => 'required',
+            // 'vehicleType' => 'required',
             'vehicleModel' => 'required',
             'vehicleModelYear' => 'required',
             'vehicleMilage' => 'required',
+            'vehicleSub' => 'required',
     ]);
 
         $error_array = array();
@@ -292,8 +343,9 @@ class AdsController extends Controller
                     'status' => 1,
                     'user_id' => auth()->user()->id,
                 ]);
+                $ad->save();
                 $vehicle = new Vehicle([
-                    'vehicle_type' => $request->get('vehicleType'),
+                    // 'vehicle_type' => $request->get('vehicleType'),
                     'color' => $request->get('vehicleColor'),
                     'engine_capacity' => $request->get('vehicleEngcapacity'),
                     'body_type' => $request->get('vehicleBodyType'),
@@ -302,12 +354,89 @@ class AdsController extends Controller
                     'transmision' => $request->get('vehicleTransmision'),
                     'milage' => $request->get('vehicleMilage'),
                     'condition' => $request->get('vehicleCondition'),
-                    'ad_id' => 1,
-                    'type_id' => 1,
+                    'ad_id' => $ad->ad_id,
+                ]);
+                $vehicle->save();
+
+                if(count($request->vehicleSub) > 0){
+                    foreach($request->vehicleSub as $item=>$v){
+                        $data2 = array(
+                            'type_id'=> $request->vehicleSub[$item],
+                            'ad_id'=> $ad->ad_id
+                        );
+                    Typecollection::insert($data2);
+                    }
+                }
+
+                $success_output = '<div class="alert alert-success"><strong> Vehicle Banner Data Inserted Successfully!!!</strong></div>';
+            }
+        }
+        
+        $output = array(
+            'error' => $error_array,
+            'success' => $success_output,
+        );
+        echo json_encode($output);
+    }
+
+    public function jobdata(Request $request){
+        $validation = Validator::make($request->all(),[
+            'jobCusName' => 'required',
+            'jobCusMobNum' => 'required',
+            'jobDistrict' => 'required',
+            'jobHomeTown' => 'required',
+            'jobDescripton' => 'required',
+            'jobTitle' => 'required',
+            'jobBanner' => 'required',
+            
+            'jobTitle' => 'required',
+            'jobSub' => 'required',
+    ]);
+
+        $error_array = array();
+        $success_output = '';
+        if ($validation->fails()) {
+            foreach ($validation->messages()->getMessages() as $field_name => $messages) {
+                $error_array[] = $messages;
+            }
+        } else {
+            if ($request->get('jobbutton_action') == 'insert') {
+                $ad = new Ad([
+                    'ad_cusName' => $request->get('jobCusName'),
+                    'ad_address' => $request->get('jobCusAddress'),
+                    'ad_mobileNumber' => $request->get('jobCusMobNum'),
+                    'ad_email' => $request->get('jobCusEmail'),
+                    'ad_homeNumber' => $request->get('jobCusHomeNum'),
+                    'ad_province' => $request->get('jobProvince'),
+                    'ad_district' => $request->get('jobDistrict'),
+                    'ad_homeTown' => $request->get('jobHomeTown'),
+                    'ad_description' => $request->get('jobDescripton'),
+                    'ad_title' => $request->get('jobTitle'),
+                    'cat_id' => $request->get('jobCategory'),
+                    'type_id' => $request->get('jobBanner'),
+                    'ad_companyName' => $request->get('jobCompanyName'),
+                    'status' => 1,
+                    'user_id' => auth()->user()->id,
                 ]);
                 $ad->save();
-                $vehicle->save();
-                $success_output = '<div class="alert alert-success"><strong> Vehicle Banner Data Inserted Successfully!!!</strong></div>';
+                $job = new Job([
+                    'job_title' => $request->get('jobJobTitle'),
+                    'experiance' => $request->get('jobExperiance'),
+                    'ad_id' => $ad->ad_id,
+                ]);
+                $job->save();
+
+                if(count($request->jobSub) > 0){
+                    foreach($request->jobSub as $item=>$v){
+                        $data2 = array(
+                            'type_id'=> $request->jobSub[$item],
+                            'ad_id'=> $ad->ad_id
+                        );
+                    Typecollection::insert($data2);
+                    }
+                }
+
+                $success_output = '<div class="alert alert-success"><strong> Job Banner Data Inserted Successfully!!!</strong></div>';
             }
         }
         

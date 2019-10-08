@@ -15,7 +15,7 @@ class Education extends Model
 protected $primaryKey = 'edu_id';
 
     protected $fillable = [
-        'medium','class_type','locations','exams','subjects','ad_id',     
+    'medium','class_type','locations','exams','subjects','ad_id','type_id',    
     ];
 
     /**

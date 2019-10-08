@@ -11,6 +11,8 @@ class Ad extends Model
      *
      * @var array
      */
+protected $primaryKey = 'ad_id';
+
     protected $fillable = [
         'ad_cusName', 'ad_address','ad_email','ad_nic', 'ad_homeNumber','ad_mobileNumber','ad_province', 'ad_district', 'ad_homeTown', 'ad_payment', 'ad_recNumber', 'ad_description', 'ad_remark', 'status', 'ad_title', 'ad_companyName', 'published_by', 'cat_id', 'type_id', 'user_id', 
     ];

@@ -15,14 +15,16 @@ class CreateLandsTable extends Migration
     {
         Schema::create('lands', function (Blueprint $table) {
             $table->increments('land_id');
-            $table->string('size');
-            $table->integer('electricity')->nullble();
-            $table->integer('water')->nullble();
-            $table->integer('roads')->nullble();
+            $table->string('size',20);
+            $table->string('electricity')->nullble();
+            $table->string('water')->nullble();
+            $table->string('roads')->nullble();
             $table->bigInteger('ad_id')->unsigned();
             $table->foreign('ad_id')->references('ad_id')->on('ads');
-            $table->bigInteger('type_id')->unsigned();
-            $table->foreign('type_id')->references('id')->on('types');
+            $table->timestamps();
+
+            // $table->bigInteger('type_id')->unsigned();
+            // $table->foreign('type_id')->references('id')->on('types');
         });
     }
 

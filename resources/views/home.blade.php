@@ -122,6 +122,12 @@
                                     @endforeach
                                 </select>
                                 </div>
+
+                                <div class="form-group">
+                                    <label>Suitable Purposes</label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
+                                    <div id="homeSub1"></div>
+                                </div>
+
                                 <div class="form-group">
                                     <label>Bath Rooms</label><font size="2" face="vardana" color="green"> (Optional)</font>
                                     <input type="text" name="bathrooms" id="bathrooms" class="form-control">
@@ -131,7 +137,7 @@
                                     <input type="text" name="rooms" id="rooms" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label>Land Size</label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
+                                    <label>Land Size</label><font size="2" face="vardana" color="green"> (Optional)</font>
                                     <input type="text" name="landsize" id="landsize" class="form-control">
                                 </div>
                                  <div class="form-group">
@@ -226,6 +232,12 @@
                                     @endforeach
                                 </select>
                                 </div>
+
+                                <div class="form-group">
+                                    <label>Suitable Purposes</label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
+                                    <div id="landSub1"></div>
+                                </div>
+
                                 <div class="form-group">
                                     <label>Land Size</label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
                                     <input type="text" name="landLandSize" id="landLandSize" class="form-control">
@@ -239,7 +251,7 @@
                                     <input type="text" name="landElectricity" id="landElectricity" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label>Main Roads</label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
+                                    <label>Main Roads</label><font size="2" face="vardana" color="green"> (optional)</font>
                                     <input type="text" name="landRoads" id="landRoads" class="form-control">
                                 </div>
                             </div>
@@ -324,6 +336,12 @@
                                     @endforeach
                                 </select>
                                 </div>
+
+                                <div class="form-group">
+                                    <label>Suitable Categories</label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
+                                    <div id="resSub1"></div>
+                                </div>
+
                                 <div class="form-group">
                                     <label>Room Types</label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
                                     <input type="text" name="resRoomType" id="resRoomType" class="form-control">
@@ -416,12 +434,18 @@
                                     @endforeach
                                 </select>
                                 </div>
+
+                                <div class="form-group">
+                                    <label>Suitable Education Methods</label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
+                                    <div id="eduSub1"></div>
+                                </div>
+
                                 <div class="form-group">
                                     <label>Medium</label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
                                     <input type="text" name="eduMedium" id="eduMedium" class="form-control">
                                 </div>
                                  <div class="form-group">
-                                    <label>Class Type</label><font size="2" face="vardana" color="green"> (Optional)</font>
+                                    <label>Class Type</label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
                                     <input type="text" name="eduClassType" id="eduClassType" class="form-control">
                                 </div>
                                 <div class="form-group">
@@ -519,10 +543,16 @@
                                     @endforeach
                                 </select>
                                 </div>
+
                                 <div class="form-group">
+                                    <label>Vehicle Category</label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
+                                    <div id="vehicleSub1"></div>
+                                </div>
+
+                                {{-- <div class="form-group">
                                     <label>Vehicle Type</label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
                                     <input type="text" name="vehicleType" id="vehicleType" class="form-control">
-                                </div>
+                                </div> --}}
                                  <div class="form-group">
                                     <label>Vehicle Colour</label><font size="2" face="vardana" color="green"> (Optional)</font>
                                     <input type="text" name="vehicleColor" id="vehicleColor" class="form-control">
@@ -553,7 +583,7 @@
                                     <input type="text" name="vehicleMilage" id="vehicleMilage" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label>Condition</label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
+                                    <label>Condition</label><font size="2" face="vardana" color="green"> (Optional)</font>
                                     <input type="text" name="vehicleCondition" id="vehicleCondition" class="form-control">
                                 </div>
                             </div>
@@ -568,6 +598,108 @@
                         <input type="hidden" name="vehiclebutton_action" id="vehiclebutton_action" value="insert">
                         <input type="hidden" name="vehicleCategory" id="vehicleCategory">
                         <input type="submit" name="submit" id="vehicleaction" value="Add" class="btn btn-info">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<div id="jobModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <form method="post" id="job_form">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="job_detail">Job Category Details</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                
+                                <div class="form-group">
+                                    <label>Customer name</label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
+                                    <input type="text" name="jobCusName" id="jobCusName" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Customer Address</label><font size="2" face="vardana" color="green"> (Optional)</font>
+                                    <input type="text" name="jobCusAddress" id="jobCusAddress" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Customer Email</label><font size="2" face="vardana" color="green"> (Optional)</font>
+                                    <input type="text" name="jobCusEmail" id="jobCusEmail" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Customer Home Number</label><font size="2" face="vardana" color="green"> (Optional)</font>
+                                    <input type="number" name="jobCusHomeNum" id="jobCusHomeNum" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Customer Mobile Number </label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
+                                    <input type="number" name="jobCusMobNum" id="jobCusMobNum" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Province</label><font size="2" face="vardana" color="green"> (Optional)</font>
+                                    <input type="text" name="jobProvince" id="jobProvince" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>District</label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
+                                    <input type="text" name="jobDistrict" id=jobDistrict"" class="form-control">
+                                </div>
+                                 
+                            </div>
+                            <div class="col-md-6">
+                                 {{csrf_field()}}
+                                 <div class="form-group">
+                                    <label>Home Town</label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
+                                    <input type="text" name="jobHomeTown" id="jobHomeTown" class="form-control">
+                                </div>
+                                 <div class="form-group">
+                                    <label>Ad Description</label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
+                                    <input type="text" name="jobDescripton" id="jobDescripton" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Ad Title</label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
+                                    <input type="text" name="jobTitle" id="jobTitle" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Banner Type</label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
+                                    <select class="form-control input-sm dynamic" name="jobBanner" id="jobBanner">
+                                    <option value="">---Select Banner Type---</option>
+                                    @foreach($banners as $banner)
+                                      <option value="{{$banner->id}}">{{$banner->type_name}}</option>
+                                    @endforeach
+                                </select>
+                                </div>
+
+                                 <div class="form-group">
+                                    <label>Job Category</label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
+                                    <div id="jobSub1"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Company Name</label><font size="2" face="vardana" color="green"> (Optional)</font>
+                                    <input type="text" name="jobCompanyName" id="jobCompanyName" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Job Title</label><font size="2" face="vardana" color="blue"> (Compulsory)</font>
+                                    <input type="text" name="jobJobTitle" id="jobJobTitle" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Experiance</label><font size="2" face="vardana" color="green"> (Optional)</font>
+                                    <input type="text" name="jobExperiance" id="jobExperiance" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <span id="jobform_output"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" name="jobbutton_action" id="vehiclebutton_action" value="insert">
+                        <input type="hidden" name="jobCategory" id="jobCategory">
+                        <input type="submit" name="submit" id="jobaction" value="Add" class="btn btn-info">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </form>

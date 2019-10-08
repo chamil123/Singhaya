@@ -26,6 +26,14 @@ Route::post('ajaxdata/landdata', 'AdsController@landdata')->name('ajaxdata.landd
 Route::post('ajaxdata/resdata', 'AdsController@resdata')->name('ajaxdata.resdata');
 Route::post('ajaxdata/edudata', 'AdsController@edudata')->name('ajaxdata.edudata');
 Route::post('ajaxdata/vehicledata', 'AdsController@vehicledata')->name('ajaxdata.vehicledata');
+Route::post('ajaxdata/jobdata', 'AdsController@jobdata')->name('ajaxdata.jobdata');
+
+Route::get('ajaxtypedata/restaurantdata', 'TypesController@resttaurantData')->name('ajaxtypedata.restaurantdata');
+Route::get('ajaxtypedata/landdata', 'TypesController@landData')->name('ajaxtypedata.landdata');
+Route::get('ajaxtypedata/edudata', 'TypesController@eduData')->name('ajaxtypedata.edudata');
+Route::get('ajaxtypedata/homedata', 'TypesController@homeData')->name('ajaxtypedata.homedata');
+Route::get('ajaxtypedata/vehicledata', 'TypesController@vehicleData')->name('ajaxtypedata.vehicledata');
+Route::get('ajaxtypedata/jobdata', 'TypesController@jobData')->name('ajaxtypedata.jobdata');
 
 
 

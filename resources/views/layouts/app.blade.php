@@ -118,20 +118,114 @@
        $('#add_data').click(function() {
         $category = $('#cats').val();
         if ($category == 1) {
+
+            $.ajax({
+            url: "{{ route('ajaxtypedata.homedata') }}",
+            method: "GET",
+            data: { "category": $category },
+            dataType:"json",
+            success: function(data){
+                $("#homeSub1").empty();
+               $.each(data, function(i, value){
+               var $types = $('<input type="checkbox" name="homeSub[]" value="'+value.id+'" /> '+value.name+"<br />");
+                 $("#homeSub1").append($types);
+               });
+            }
+        })
+
              $('#houseModal').modal('show');
              $('#houseCategory').val($category);
         }else if($category == 2){  
+
+            $.ajax({
+            url: "{{ route('ajaxtypedata.restaurantdata') }}",
+            method: "GET",
+            data: { "category": $category },
+            dataType:"json",
+            success: function(data){
+                $("#resSub1").empty();
+               $.each(data, function(i, value){
+               var $types = $('<input type="checkbox" name="resSub[]" value="'+value.id+'" /> '+value.name+"<br />");
+                 $("#resSub1").append($types);
+               });
+            }
+        })
+
              $('#resModal').modal('show');
              $('#resCategory').val($category);   
         }else if($category == 3){
+
+            $.ajax({
+            url: "{{ route('ajaxtypedata.landdata') }}",
+            method: "GET",
+            data: { "category": $category },
+            dataType:"json",
+            success: function(data){
+                $("#landSub1").empty();
+               $.each(data, function(i, value){
+               var $types = $('<input type="checkbox" name="landSub[]" value="'+value.id+'" /> '+value.name+"<br />");
+                 $("#landSub1").append($types);
+               });
+            }
+        })
+
              $('#landModal').modal('show');
              $('#landCategory').val($category);
         }else if($category == 4){
+
+            $.ajax({
+            url: "{{ route('ajaxtypedata.edudata') }}",
+            method: "GET",
+            data: { "category": $category },
+            dataType:"json",
+            success: function(data){
+                $("#eduSub1").empty();
+               $.each(data, function(i, value){
+               var $types = $('<input type="checkbox" name="eduSub[]" value="'+value.id+'" /> '+value.name+"<br />");
+                 $("#eduSub1").append($types);
+               });
+
+            }
+        })
+
              $('#eduModal').modal('show');
              $('#eduCategory').val($category);
         }else if($category == 7){
+
+            $.ajax({
+            url: "{{ route('ajaxtypedata.vehicledata') }}",
+            method: "GET",
+            data: { "category": $category },
+            dataType:"json",
+            success: function(data){
+                $("#vehicleSub1").empty();
+               $.each(data, function(i, value){
+               var $types = $('<input type="checkbox" name="vehicleSub[]" value="'+value.id+'" /> '+value.name+"<br />");
+                 $("#vehicleSub1").append($types);
+               });
+            }
+        })
+
              $('#vehicleModal').modal('show');
              $('#vehicleCategory').val($category);
+        }else if($category == 8){
+
+            $.ajax({
+            url: "{{ route('ajaxtypedata.jobdata') }}",
+            method: "GET",
+            data: { "category": $category },
+            dataType:"json",
+            success: function(data){
+                $("#jobSub1").empty();
+               $.each(data, function(i, value){
+               var $types = $('<input type="checkbox" name="jobSub[]" value="'+value.id+'" /> '+value.name+"<br />");
+                 $("#jobSub1").append($types);
+               });
+            }
+        })
+
+             $('#jobModal').modal('show');
+             $('#jobCategory').val($category);
         }
           
            $('#house_form')[0].reset();
@@ -144,12 +238,12 @@
            $('#landbutton_action').val('insert');
            $('#landaction').val('Add');
 
-           $('#res_form')[0].reset();
+            $('#res_form')[0].reset();
            $('#resform_output').html('');
            $('#resbutton_action').val('insert');
            $('#resaction').val('Add');
 
-           $('#edu_form')[0].reset();
+           // $('#edu_form')[0].reset();
            $('#eduform_output').html('');
            $('#edubutton_action').val('insert');
            $('#eduaction').val('Add');
@@ -159,8 +253,12 @@
            $('#vehiclebutton_action').val('insert');
            $('#vehicleaction').val('Add');
 
-       }); 
+           $('#job_form')[0].reset();
+           $('#jobform_output').html('');
+           $('#jobbutton_action').val('insert');
+           $('#jobaction').val('Add');
 
+       }); 
 
 
        $('#house_form').on('submit', function(event){
@@ -297,6 +395,34 @@
                     $('#vehicle_detail').text('Vehicle Category Details');
                     $('#vehiclebutton_action').val('insert');
                     setTimeout(function() {$('#vehicleModal').modal('toggle');}, 4000);
+                    $('#agent_table').DataTable().ajax.reload();
+                }
+            }
+        })
+       }); 
+
+       $('#job_form').on('submit', function(event){
+        event.preventDefault();
+        var form_data = $(this).serialize();
+        $.ajax({
+            url: "{{ route('ajaxdata.jobdata') }}",
+            method: "POST",
+            data: form_data,
+            dataType:"json",
+            success: function(data){
+                if (data.error.length > 0) {
+                    var error_html = '';
+                for (var count = 0; count < data.error.length; count++) {
+                    error_html += '<div class="alert alert-danger"><strong>'+data.error[count]+'</strong></div>';
+                }
+                $('#jobform_output').html(error_html);
+                } else {
+                    $('#jobform_output').html(data.success);
+                    $('#job_form')[0].reset();
+                    $('#jobaction').val('Add');
+                    $('#job_detail').text('Job Category Details');
+                    $('#jobbutton_action').val('insert');
+                    setTimeout(function() {$('#jobModal').modal('toggle');}, 4000);
                     $('#agent_table').DataTable().ajax.reload();
                 }
             }

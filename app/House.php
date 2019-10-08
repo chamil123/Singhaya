@@ -15,7 +15,7 @@ class House extends Model
 protected $primaryKey = 'house_id';
 
     protected $fillable = [
-        'bath_rooms', 'rooms','land_size','water', 'electricity','ad_id','type_id',     
+    'bath_rooms', 'rooms','land_size','water', 'electricity','ad_id','type_id',     
     ];
 
     /**

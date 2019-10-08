@@ -17,9 +17,9 @@ class CreateJobsTable extends Migration
             $table->increments('id');
             $table->string('job_title');
             $table->string('experiance')->nullable();
-            $table->timestamps();
             $table->bigInteger('ad_id')->unsigned();
             $table->foreign('ad_id')->references('ad_id')->on('ads');
+            $table->timestamps();
         });
     }
 

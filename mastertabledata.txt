@@ -1,0 +1,15 @@
+categories table
+
+INSERT INTO `categories` (`id`, `cat_name`, `created_at`, `updated_at`) VALUES (NULL, 'Homes', NULL, NULL), (NULL, 'Restaurants', NULL, NULL), (NULL, 'Lands', NULL, NULL), (NULL, 'Educations', NULL, NULL), (NULL, 'Matrimonies', NULL, NULL), (NULL, 'Saloons & Spa', NULL, NULL), (NULL, 'Vehicles', NULL, NULL), (NULL, 'Recruitments', NULL, NULL);
+
+--------------------------------------------------------------------
+
+bannertypes table
+
+INSERT INTO `bannertypes` (`id`, `type_name`, `created_at`, `updated_at`) VALUES (NULL, 'Featured', NULL, NULL), (NULL, 'Slider', NULL, NULL), (NULL, 'Normal', NULL, NULL), (NULL, 'Normal super', NULL, NULL);
+
+--------------------------------------------------------------------
+
+types table
+
+INSERT INTO `types` (`id`, `name`, `cat_id`, `created_at`, `updated_at`) VALUES (NULL, 'restaurants', '2', NULL, NULL), (NULL, 'guest houses', '2', NULL, NULL), (NULL, 'hotels', '2', NULL, NULL), (NULL, 'cottages', '2', NULL, NULL), (NULL, 'residences', '1', NULL, NULL), (NULL, 'business', '1', NULL, NULL), (NULL, 'other purposes', '1', NULL, NULL), (NULL, 'training programs', '4', NULL, NULL), (NULL, 'academic exams', '4', NULL, NULL), (NULL, 'profesienal  exams', '4', NULL, NULL), (NULL, 'other studies', '4', NULL, NULL), (NULL, 'residences', '3', NULL, NULL), (NULL, 'cultivate', '3', NULL, NULL), (NULL, 'business', '3', NULL, NULL), (NULL, 'other purposes', '3', NULL, NULL), (NULL, 'motor cycles', '7', NULL, NULL), (NULL, 'cars', '7', NULL, NULL), (NULL, 'three wheelers', '7', NULL, NULL), (NULL, 'vans', '7', NULL, NULL), (NULL, 'jeeps', '7', NULL, NULL), (NULL, 'full time', '8', NULL, NULL), (NULL, 'part time', '8', NULL, NULL);

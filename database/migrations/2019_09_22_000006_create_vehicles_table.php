@@ -15,19 +15,21 @@ class CreateVehiclesTable extends Migration
     {
         Schema::create('vehicles', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('vehicle_type');
+            // $table->string('vehicle_type');
             $table->string('color')->nullable();
             $table->string('engine_capacity')->nullable();
             $table->string('body_type')->nullable();
             $table->string('model');
             $table->string('model_year');
-            $table->string('transmsion')->nullable();
+            $table->string('transmision')->nullable();
             $table->string('milage');
             $table->string('condition')->nullable();
             $table->bigInteger('ad_id')->unsigned();
             $table->foreign('ad_id')->references('ad_id')->on('ads');
-            $table->bigInteger('type_id')->unsigned();
-            $table->foreign('type_id')->references('id')->on('types');
+            $table->timestamps();
+
+            // $table->bigInteger('type_id')->unsigned();
+            // $table->foreign('type_id')->references('id')->on('types');
         });
     }
 

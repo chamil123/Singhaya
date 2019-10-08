@@ -15,12 +15,14 @@ class CreateRestaurantsTable extends Migration
     {
         Schema::create('restaurants', function (Blueprint $table) {
             $table->increments('rest_id');
-            $table->string('room_type')->nullble();
+            $table->string('room_type');
             $table->string('other_specs')->nullble();
             $table->bigInteger('ad_id')->unsigned();
             $table->foreign('ad_id')->references('ad_id')->on('ads');
-            $table->bigInteger('type_id')->unsigned();
-            $table->foreign('type_id')->references('id')->on('types');
+            $table->timestamps();
+
+            // $table->bigInteger('type_id')->unsigned();
+            // $table->foreign('type_id')->references('id')->on('types');
         });
     }
 

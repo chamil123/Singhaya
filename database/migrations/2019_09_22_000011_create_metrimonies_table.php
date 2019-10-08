@@ -15,14 +15,16 @@ class CreateMetrimoniesTable extends Migration
     {
         Schema::create('metrimonies', function (Blueprint $table) {
             $table->increments('met_id');
-            $table->integer('gender');
-            $table->integer('height')->nullble();
-            $table->integer('age');
-            $table->integer('job')->nullble();
-            $table->integer('education')->nullble();
-            $table->integer('horoscope')->nullble();
+            $table->string('gender');
+            $table->string('height')->nullble();
+            $table->string('age');
+            $table->string('job')->nullble();
+            $table->string('education')->nullble();
+            $table->string('horoscope')->nullble();
             $table->bigInteger('ad_id')->unsigned();
             $table->foreign('ad_id')->references('ad_id')->on('ads');
+            $table->timestamps();
+
         });
     }
 

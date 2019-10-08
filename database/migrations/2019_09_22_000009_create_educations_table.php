@@ -15,13 +15,15 @@ class CreateEducationsTable extends Migration
     {
         Schema::create('educations', function (Blueprint $table) {
             $table->increments('edu_id');
-            $table->integer('medium');
-            $table->integer('class_type')->nullble();
-            $table->integer('locations');
-            $table->integer('exams');
-            $table->integer('subjects');
+            $table->string('medium');
+            $table->string('class_type');
+            $table->string('locations');
+            $table->string('exams');
+            $table->string('subjects');
             $table->bigInteger('ad_id')->unsigned();
             $table->foreign('ad_id')->references('ad_id')->on('ads');
+            $table->timestamps();
+
         });
     }
 
