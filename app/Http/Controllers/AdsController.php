@@ -17,6 +17,7 @@ use DB;
 use Validator;
 use DataTables;
 
+
 class AdsController extends Controller
 {
      public function housedata(Request $request){
@@ -446,5 +447,34 @@ class AdsController extends Controller
         );
         echo json_encode($output);
     }
+    public function checking() {
+        $AdsVals = DB::table('ads')
+        ->join('categories', 'ads.cat_id', '=', 'categories.id')
+        
+        ->where([
+            ['ads.status', 1],
+        ])
+        ->get();
+        return view('admin.viewAds', compact('AdsVals'));
+   }public function confirme() {
+    $confirmeds = DB::table('ads')
+    ->join('categories', 'ads.cat_id', '=', 'categories.id')
+    
+    ->where([
+        ['ads.status', 2],
+    ])
+    ->get();
+    return view('admin.confirmed', compact('confirmeds'));
+    }public function reject() {
+        $confirmeds = DB::table('ads')
+        ->join('categories', 'ads.cat_id', '=', 'categories.id')
+        
+        ->where([
+            ['ads.status', 3],
+        ])
+        ->get();
+        return view('admin.reject', compact('confirmeds'));
+}
+
 
 }

@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-   
+
 <!-- Mirrored from templates.scriptsbundle.com/carspot/demos/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Sep 2019 16:05:55 GMT -->
 <head>
       <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -55,7 +55,15 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+
+      
       <![endif]-->
+
+<!-- 
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
    </head>
    <body>
       <!-- =-=-=-=-=-=-= Preloader =-=-=-=-=-=-= -->
@@ -236,39 +244,39 @@
                                              <a href="#">
                                         		<img alt="Hybrid" src="images/bodytype/1.png">
                                         		Convertible
-                                        	 </a> 
+                                        	 </a>
                                           </li>
                                           <li>
                                              <a href="#">
                                         		<img alt="Hybrid" src="images/bodytype/2.png">
                                         		Coupe
-                                        	 </a> 
+                                        	 </a>
                                           </li>
                                           <li>
                                              <a href="#">
                                         		<img alt="Hybrid" src="images/bodytype/3.png">
                                         		Sedan
-                                        	 </a> 
+                                        	 </a>
                                           </li>
                                           <li>
                                              <a href="#">
                                         		<img alt="Hybrid" src="images/bodytype/4.png">
                                         		Van/Minivan
-                                        	 </a> 
+                                        	 </a>
                                           </li>
                                           <li>
                                              <a href="#">
                                         		<img alt="Hybrid" src="images/bodytype/5.png">
                                         		Truck
-                                        	 </a> 
+                                        	 </a>
                                           </li>
                                           <li>
                                              <a href="#">
                                         		<img alt="Hybrid" src="images/bodytype/6.png">
                                         		Hybrid
-                                        	 </a> 
+                                        	 </a>
                                           </li>
-                                          
+
                                        </ul>
                                     </div>
                                  </div>
@@ -365,7 +373,7 @@
                                           <li><a href="about-1.html">About Us 2</a></li>
                                           <li><a href="cooming-soon.html">Comming Soon</a></li>
                                           <li><a href="elements.html">Shortcodes</a></li>
-                                         
+
                                        </ul>
                                     </div>
                                     <!--grid column 2-->
@@ -376,7 +384,7 @@
                                           <li><a href="faqs.html">FAQS</a></li>
                                           <li><a href="login.html">Login</a></li>
                                           <li><a href="register.html">Register</a></li>
-                                         
+
                                        </ul>
                                     </div>
                                     <!--grid column 2-->
@@ -437,16 +445,59 @@
       </div>
       <!-- =-=-=-=-=-=-= Main Header End  =-=-=-=-=-=-= -->
       <!-- =-=-=-=-=-=-= Home Banner  =-=-=-=-=-=-= -->
-      <div id="banner">
+
+     
+
+      <div class="container-fluid" style=" margin: 0;padding: 0;">
+ 
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+    
+    <div class="item active">
+        <img src="{{ asset('bower_components\Web\images\slider\5d0c902590a3d.jpeg')}}" alt="Los Angeles" style="width:100%;">
+      </div>
+      <div class="item ">
+        <img src="{{ asset('bower_components\Web\images\slider\1.jpg')}}" alt="Los Angeles" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="{{ asset('bower_components\Web\images\slider\2.jpg')}}" alt="Chicago" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="{{ asset('bower_components\Web\images\slider\3.jpg')}}" alt="New york" style="width:100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+      <!-- <div id="banner">
          <div class="container">
             <div class="search-container">
-               <!-- Form -->
+             
                <h2>What are you looking for ?</h2>
                <p>Search <strong>267,241</strong> new ads -<strong> 83 </strong> added today</p>
                <a class="btn btn-theme">Post Your Ad</a>
             </div>
          </div>
-      </div>
+      </div> -->
       <!-- =-=-=-=-=-=-= Home Banner End =-=-=-=-=-=-= -->
       <!-- =-=-=-=-=-=-= Advanced Search =-=-=-=-=-=-= -->
       <div class="advance-search">
@@ -534,7 +585,7 @@
                                         <a href="#">
                                         <img alt="Convertible" src="images/bodytype/1.png">
                                         <h4>Convertible</h4>
-                                        </a> 
+                                        </a>
                                     </div>
                                 </div>
                                 <!-- Body Type -->
@@ -543,7 +594,7 @@
                                         <a href="#">
                                         <img alt="Coupe" src="images/bodytype/2.png">
                                         <h4>Coupe</h4>
-                                        </a> 
+                                        </a>
                                     </div>
                                 </div>
                                 <!-- Body Type -->
@@ -552,7 +603,7 @@
                                         <a href="#">
                                         <img alt="Sedan" src="images/bodytype/3.png">
                                         <h4>Sedan</h4>
-                                        </a> 
+                                        </a>
                                     </div>
                                 </div>
                                 <!-- Body Type -->
@@ -561,7 +612,7 @@
                                         <a href="#">
                                         <img alt="Van/Minivan" src="images/bodytype/4.png">
                                         <h4>Van/Minivan</h4>
-                                        </a> 
+                                        </a>
                                     </div>
                                 </div>
                                 <!-- Body Type -->
@@ -570,7 +621,7 @@
                                         <a href="#">
                                         <img alt="Truck" src="images/bodytype/5.png">
                                         <h4>Truck</h4>
-                                        </a> 
+                                        </a>
                                     </div>
                                 </div>
                                 <!-- Body Type -->
@@ -579,7 +630,7 @@
                                         <a href="#">
                                         <img alt="Hybrid" src="images/bodytype/6.png">
                                         <h4>Hybrid</h4>
-                                        </a> 
+                                        </a>
                                     </div>
                                 </div>
                               </div>
@@ -594,8 +645,8 @@
       <!-- =-=-=-=-=-=-= Advanced Search End =-=-=-=-=-=-= -->
       <!-- =-=-=-=-=-=-= Main Content Area =-=-=-=-=-=-= -->
       <div class="main-content-area clearfix">
-         
-      <!-- =-=-=-=-=-=-= Testimonials =-=-=-=-=-=-= -->         
+
+      <!-- =-=-=-=-=-=-= Testimonials =-=-=-=-=-=-= -->
          <section class="section-padding parallex bg-img-3">
             <div class="container">
                <div class="row">
@@ -855,7 +906,7 @@
                                  <span>Featured</span>
                               </div>
                               <div class="image">
-                                 <img alt="Carspot" src="images/posting/3.jpg" class="img-responsive">
+                                 <img alt="Carspot" src="{{ asset('bower_components/web/images/posting/3.jpg')}}" class="img-responsive">
                                  <div class="ribbon popular"></div>
                                  <div class="price-tag">
                                     <div class="price"><span>$117,000</span></div>
@@ -890,7 +941,7 @@
                                  <span>Featured</span>
                               </div>
                               <div class="image">
-                                 <img alt="Carspot" src="images/posting/6.jpg" class="img-responsive">
+                                 <img alt="Carspot" src="{{ asset('bower_components/web/images/posting/6.jpg')}}" class="img-responsive">
                                  <div class="ribbon popular"></div>
                                  <div class="price-tag">
                                     <div class="price"><span>$77,000</span></div>
@@ -925,7 +976,7 @@
                                  <span>Featured</span>
                               </div>
                               <div class="image">
-                                 <img alt="Carspot" src="images/posting/13.jpg" class="img-responsive">
+                                 <img alt="Carspot" src="{{ asset('bower_components/web/images/posting/13.jpg')}}" class="img-responsive">
                                  <div class="ribbon popular"></div>
                                  <div class="price-tag">
                                     <div class="price"><span>$50,00</span></div>
@@ -960,7 +1011,7 @@
                                  <span>Featured</span>
                               </div>
                               <div class="image">
-                                 <img alt="Carspot" src="images/posting/14.jpg" class="img-responsive">
+                                 <img alt="Carspot" src="{{ asset('bower_components/web/images/posting/14.jpg')}}" class="img-responsive">
                                  <div class="ribbon popular"></div>
                                  <div class="price-tag">
                                     <div class="price"><span>$999,000</span></div>
@@ -995,7 +1046,7 @@
                                  <span>Featured</span>
                               </div>
                               <div class="image">
-                                 <img alt="Carspot" src="images/posting/8.jpg" class="img-responsive">
+                                 <img alt="Carspot" src="{{ asset('bower_components/web/images/posting/8.jpg')}}" class="img-responsive">
                                  <div class="ribbon popular"></div>
                                  <div class="price-tag">
                                     <div class="price"><span>$205,000</span></div>
@@ -1033,84 +1084,25 @@
             <!-- Main Container End -->
          </section>
          <!-- =-=-=-=-=-=-= Featured Ads End =-=-=-=-=-=-= -->
-         
+
          <!-- =-=-=-=-=-=-= Services Section  =-=-=-=-=-=-= -->
-         <section class="section-padding services-center">
-            <div class="container">
-               <!-- Heading Area -->
-               <div class="heading-panel">
-                  <div class="col-xs-12 col-md-12 col-sm-12 text-center">
-                     <!-- Main Title -->
-                     <h1>Our <span class="heading-color"> Feature </span> Services</h1>
-                     <!-- Short Description -->
-                     <p class="heading-text">Eu delicata rationibus usu. Vix te putant utroque, ludus fabellas duo eu, his dico ut debet consectetuer.</p>
-                  </div>
-               </div>
-               <div class="row clearfix">
-                  <!--Left Column-->
-                  <div class="col-md-4 col-sm-6 col-xs-12 pull-left">
-                  <!--Service Block -->
-                  <div class="services-grid">
-                        <div class="icons icon-right"><i class="flaticon-engine-4"></i></div>
-                        <h4>Engine Upgrades</h4>
-                        <p>We have the right caring, experience and dedicated professional for you.</p>
-                     </div>
-                  <!--Service Block -->
-                  <div class="services-grid">
-                        <div class="icons icon-right"><i class="flaticon-settings"></i></div>
-                        <h4>Car Inspection</h4>
-                        <p>We have the right caring, experience and dedicated professional for you.</p>
-                     </div>
-                      <!--Service Block -->
-                  
-
-                  </div>
-                  
-                  <!--Right Column-->
-                  <div class="col-md-4 col-sm-6 col-xs-12 pull-right">
-                     <!--Service Block-->
-                     
-                       
-                     <div class="services-grid">
-                        <div class="icons icon-left"><i class="flaticon-vehicle-3"></i></div>
-                        <h4>Car Oil Change</h4>
-                        <p>We have the right caring, experience and dedicated professional for you.</p>
-                     </div>
-                     <!--Service Block-->
-                      <div class="services-grid">
-                        <div class="icons icon-left"><i class="flaticon-car-steering-wheel"></i></div>
-                        <h4>Power steering</h4>
-                        <p>We have the right caring, experience and dedicated professional for you.</p>
-                     </div>
-                      
-                  </div>
-                  <!--Image Column-->
-                  <div class="col-md-4 col-sm-12 col-xs-12">
-                     <figure class="wow zoomIn  animated" data-wow-delay="0ms" data-wow-duration="3500ms" >
-                        <img class="center-block" src="images/service-car.png" alt="">
-                     </figure>
-                  </div>
-               </div>
-
-            </div>
-
-         </section>
+      
          <!-- =-=-=-=-=-=-=  Services Section End =-=-=-=-=-=-= -->
-         
-         
 
-         
-         
-       
+
+
+
+
+
          <!-- =-=-=-=-=-=-= Expert Reviews Section =-=-=-=-=-=-= -->
-         <section class="news section-padding">
+         <!-- <section class="news section-padding">
             <div class="container">
                <div class="row">
                   <div class="heading-panel">
                      <div class="col-xs-12 col-md-12 col-sm-12 left-side">
-                        <!-- Main Title -->
+                       
                         <h1>Expert  <span class="heading-color"> Reviews</span> Feedback</h1>
-                        <!-- Short Description -->
+                      
                         <p class="heading-text">Eu delicata rationibus usu. Vix te putant utroque, ludus fabellas duo eu, his dico ut debet consectetuer.</p>
                      </div>
                   </div>
@@ -1167,7 +1159,7 @@
                </div>
                <div class="clearfix"></div>
             </div>
-         </section>
+         </section> -->
          <!-- =-=-=-=-=-=-= Expert Reviews End =-=-=-=-=-=-= -->
          <!-- =-=-=-=-=-=-= Our Clients =-=-=-=-=-=-= -->
          <section class="client-section gray">
@@ -1220,12 +1212,12 @@
          </section>
          <!-- =-=-=-=-=-=-= Our Clients End =-=-=-=-=-=-= -->
          <!-- =-=-=-=-=-=-= Car Inspection =-=-=-=-=-=-= -->
-         <section class="car-inspection section-padding">
+         <!-- <section class="car-inspection section-padding">
             <div class="container">
                <div class="row">
                   <div class="col-md-6 col-sm-6 col-xs-12 nopadding hidden-sm">
                      <div class="call-to-action-img-section-right">
-                        <img src="images/car-in-red.png" class="wow slideInLeft img-responsive" data-wow-delay="0ms" data-wow-duration="3000ms" alt="">
+                        <img src="{{ asset('bower_components/images/car-in-red.png')}}" class="wow slideInLeft img-responsive" data-wow-delay="0ms" data-wow-duration="3000ms" alt="">
                      </div>
                   </div>
                   <div class="col-md-6 col-sm-12 col-xs-12 nopadding">
@@ -1256,7 +1248,7 @@
                   </div>
                </div>
             </div>
-         </section>
+         </section> -->
          <!-- =-=-=-=-=-=-= Car Inspection End =-=-=-=-=-=-= -->
            <!-- =-=-=-=-=-=-= Buy Or Sale =-=-=-=-=-=-= -->
          <section class="sell-box padding-top-70">
@@ -1270,7 +1262,7 @@
                            <p>Search your car in our Inventory and request a quote on the vehicle of your choosing. </p>
                         </div>
                         <div class="text-center">
-                           <img class="img-responsive wow slideInLeft center-block" data-wow-delay="0ms" data-wow-duration="2000ms" src="images/sell.png" alt="">
+                           <img class="img-responsive wow slideInLeft center-block" data-wow-delay="0ms" data-wow-duration="2000ms" src="{{ asset('bower_components/Web/images/sell.png')}}" alt="">
                         </div>
                      </div>
                   </div>
@@ -1282,7 +1274,7 @@
                            <p>Request search your car in our Inventory and a quote on the vehicle of your choosing. </p>
                         </div>
                         <div class="text-center">
-                           <img class="img-responsive wow slideInRight center-block" data-wow-delay="0ms" data-wow-duration="2000ms" src="images/sell-1.png" alt="">
+                           <img class="img-responsive wow slideInRight center-block" data-wow-delay="0ms" data-wow-duration="2000ms" src="{{ asset('bower_components/Web/images/sell-1.png')}}" alt="">
                         </div>
                      </div>
                   </div>
@@ -1290,7 +1282,7 @@
             </div>
          </section>
           <!-- =-=-=-=-=-=-= Buy Or Sale End =-=-=-=-=-=-= -->
-         
+
          <!-- =-=-=-=-=-=-= FOOTER =-=-=-=-=-=-= -->
          <footer class="footer-bg">
             <!-- Footer Content -->
@@ -1343,23 +1335,23 @@
                               <p>We may send you information about related events, webinars, products and services which we believe.</p>
                               <form>
                                  <input class="" value="Enter your email address" type="text">
-                                 <input class="submit-btn" name="submit" value="Submit" type="submit"> 
+                                 <input class="submit-btn" name="submit" value="Submit" type="submit">
                               </form>
                            </div>
                         </div>
                         <div class="copyright">
                            <p>© 2017 Carspot All rights reserved. Design by <a href="http://themeforest.net/user/scriptsbundle/portfolio" target="_blank">Scriptsbundle</a> </p>
-                        </div>   
+                        </div>
                         <!-- Newslatter -->
                      </div>
                   </div>
                </div>
             </div>
-           
+
          </footer>
          <!-- =-=-=-=-=-=-= FOOTER END =-=-=-=-=-=-= -->
       </div>
-      <!-- Main Content Area End --> 
+      <!-- Main Content Area End -->
       <!-- Back To Top -->
       <a href="#0" class="cd-top">Top</a>
       <!-- =-=-=-=-=-=-= JQUERY =-=-=-=-=-=-= -->
@@ -1400,4 +1392,3 @@
 
 <!-- Mirrored from templates.scriptsbundle.com/carspot/demos/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Sep 2019 16:08:07 GMT -->
 </html>
-

@@ -521,6 +521,7 @@
     </section>
 
     <!-- Main content -->
+    @yield('content')
 asdasdasdas
     <!-- /.content -->
   </div>

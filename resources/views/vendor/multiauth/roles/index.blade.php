@@ -38,7 +38,7 @@
 
 <section class="content-header">
       <h1>
-        Role
+        Roles
         <small>view roles</small>
       </h1>
       <ol class="breadcrumb">

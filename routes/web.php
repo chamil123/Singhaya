@@ -37,13 +37,16 @@ Route::get('ajaxtypedata/jobdata', 'TypesController@jobData')->name('ajaxtypedat
 
 
 
-
+Route::get('/admin/checking', 'AdsController@checking');
+Route::get('/admin/confirme', 'AdsController@confirme');
+Route::get('/admin/reject', 'AdsController@reject');
 
 
 Route::get('/chamil',function(){
     return view('Admin.layout');
     
 });
+
 Route::get('/web',function(){
     return view('Web.layout');
     

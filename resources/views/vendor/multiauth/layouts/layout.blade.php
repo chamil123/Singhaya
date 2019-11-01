@@ -404,6 +404,7 @@
             <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
           </ul>
         </li> -->
+        @admin('super,manager')
         <li class="treeview">
           <a href="#">
             <i class="fa fa-user"></i> <span>Admin Management</span>
@@ -411,11 +412,31 @@
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
+
           <ul class="treeview-menu">
-          @admin('super,manager')
+
             <li><a href="{{ route('admin.show') }}"><i class="fa fa-circle-o"></i> Admin List</a></li>
             <li><a href="{{ route('admin.roles') }}"><i class="fa fa-circle-o"></i> Role List</a></li>
-            @endadmin
+
+            <!-- <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li> -->
+          </ul>
+        </li>
+        @endadmin
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-user"></i> <span>Status Management</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+
+          <ul class="treeview-menu">
+
+            <li><a href="/admin/checking"><i class="fa fa-circle-o"></i> Checking</a></li>
+            <li><a href="/admin/confirme"><i class="fa fa-circle-o"></i> Confiremed</a></li>
+            <li><a href="/admin/reject"><i class="fa fa-circle-o"></i> Reject</a></li>
+
             <!-- <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li> -->
           </ul>
         </li>
